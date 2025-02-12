@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { ITodoItem } from '@/components/TodoItem/TodoItem.types';
 
-axios.defaults.baseURL = 'https:jsonplaceholder.typicode.com';
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
 
 export const getAllTodos = async (): Promise<ITodoItem[]> => {
   const { data } = await axios.get<ITodoItem[]>('/todos?_limit=10');
